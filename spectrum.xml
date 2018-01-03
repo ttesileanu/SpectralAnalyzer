@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <display>
+    <width>800</width>
+    <height>600</height>
+    <!-- a space-separated list of displays -->
+    <types>oscilloscope spectral spectrogram</types>
+    <!-- the current display -->
+    <current>spectrogram</current>
+    <!-- settings for each display module -->
+    <oscilloscope>
+      <!-- number of display points -->
+      <npoints>400</npoints>
+      <!-- maximum shift fraction to place zero-crossing at center -->
+      <maxshift>0.4</maxshift>
+      <!-- whether to fix the zero-crossing to the center -->
+      <zerofix>true</zerofix>
+      <!-- whether to display points, lines, or both -->
+      <style>lines</style>
+      <!-- axes and grid settings -->
+      <axes>
+        <visible>true</visible>
+        <!-- whether the grid is visible -->
+        <grid>true</grid>
+        <!-- whether the ticks are visible -->
+        <ticks_visible>true</ticks_visible>
+        <!-- whether to clip the trace to the clipping area (defined below) -->
+        <clip>true</clip>
+        <!-- size of minor ticks -->
+        <mintick_size>3</mintick_size>
+        <!-- size of major ticks -->
+        <majtick_size>5</majtick_size>
+        <!-- settings for the time axis -->
+        <x>
+          <!-- interval for minor ticks -->
+          <mintick_interval>0.02</mintick_interval>
+          <!-- interval for major ticks -->
+          <majtick_interval>0.1</majtick_interval>
+        </x>
+        <!-- settings for the amplitude axis -->
+        <y>
+          <!-- range for the y axis -->
+          <range>-0.656099,0.656099</range>
+          <!-- interval for minor ticks -->
+          <mintick_interval>0.04</mintick_interval>
+          <!-- interval for major ticks -->
+          <majtick_interval>0.2</majtick_interval>
+        </y>
+      </axes>
+    </oscilloscope>
+    <spectral>
+      <!-- number of display points -->
+      <npoints>400</npoints>
+      <!-- whether to fill space under spectrum -->
+      <fill>true</fill>
+      <!-- fill color -->
+      <fill_color>0,0.7,0.7,1</fill_color>
+      <!-- axes and grid settings -->
+      <axes>
+        <visible>true</visible>
+        <!-- whether the grid is visible -->
+        <grid>true</grid>
+        <!-- whether the ticks are visible -->
+        <ticks_visible>true</ticks_visible>
+        <!-- whether to clip the trace to the clipping area (defined below) -->
+        <clip>true</clip>
+        <!-- size of minor ticks -->
+        <mintick_size>3</mintick_size>
+        <!-- size of major ticks -->
+        <majtick_size>5</majtick_size>
+        <!-- settings for the frequency axis -->
+        <x>
+          <!-- scaling type: log or linear -->
+          <scaling>linear</scaling>
+          <!-- frequency range displayed -->
+          <range>135.901,6976.76</range>
+          <!-- spacing for ticks: log or linear -->
+          <ticks_spacing>log</ticks_spacing>
+          <!-- ratio for minor ticks (for log scale) -->
+          <mintick_ratio>1.414214</mintick_ratio>
+          <!-- ratio for major ticks (for log scale) -->
+          <majtick_ratio>2</majtick_ratio>
+          <!-- interval for minor ticks (for linear scale) -->
+          <mintick_interval>200</mintick_interval>
+          <!-- interval for major ticks (for linear scale) -->
+          <majtick_interval>1000</majtick_interval>
+        </x>
+        <!-- settings for the intensity axis -->
+        <y>
+          <!-- scaling type: log or linear -->
+          <scaling>log</scaling>
+          <!-- intensity range displayed -->
+          <range>0.00400452,749.154</range>
+          <!-- spacing for ticks: log or linear -->
+          <ticks_spacing>log</ticks_spacing>
+          <!-- ratio for minor ticks (for log scale) -->
+          <mintick_ratio>1.584893</mintick_ratio>
+          <!-- ratio for major ticks (for log scale) -->
+          <majtick_ratio>10</majtick_ratio>
+          <!-- interval for minor ticks (for linear scale) -->
+          <mintick_interval>2</mintick_interval>
+          <!-- interval for major ticks (for linear scale) -->
+          <majtick_interval>10</majtick_interval>
+        </y>
+      </axes>
+    </spectral>
+    <spectrogram>
+      <!-- palette to use for the spectrogram -->
+      <palette>thermal</palette>
+      <axes>
+        <!-- settings for the frequency axis -->
+        <x>
+          <!-- scaling type: log or linear -->
+          <scaling>linear</scaling>
+          <!-- frequency range displayed -->
+          <range>1.33333,5000</range>
+        </x>
+        <!-- settings for the intensity axis -->
+        <y>
+          <!-- scaling type: log or linear -->
+          <scaling>log</scaling>
+          <!-- intensity range displayed -->
+          <range>0.0647271,12.15</range>
+          <!-- spacing for ticks: log or linear -->
+        </y>
+      </axes>
+    </spectrogram>
+  </display>
+  <input>
+    <!-- a space-separated list of input modules -->
+    <types>fake portaudio</types>
+    <!-- the current input -->
+    <current>portaudio</current>
+    <!-- settings for each input module -->
+    <fake>
+      <!-- buffer size -->
+      <buffer>2048</buffer>
+      <!-- sample rate -->
+      <rate>44100</rate>
+      <!-- frequency of sound generated -->
+      <frequency>1000</frequency>
+    </fake>
+    <portaudio>
+      <!-- buffer size -->
+      <buffer>4096</buffer>
+      <!-- sample rate -->
+      <rate>44100</rate>
+    </portaudio>
+  </input>
+  <!-- settings referring to signal processors -->
+  <processors>
+    <!-- window function used for FFT -->
+    <window>gaussian</window>
+    <!-- settings for the window functions -->
+    <gaussian />
+  </processors>
+  <!-- transition animations to be used by the program -->
+  <transitions>
+    <!-- length = duration of transition in seconds -->
+    <fade length="0.3">linear</fade>
+    <zoom length="0.2">quadratic,out</zoom>
+    <type_change length="0.7">linear</type_change>
+    <tick length="0.3">linear</tick>
+    <shift length="0.3">quadratic,out</shift>
+    <open length="1">quadratic,out</open>
+    <disp_fade length="0.5">linear</disp_fade>
+  </transitions>
+</settings>

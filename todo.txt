@@ -1,0 +1,13 @@
+1. Decide whether the spectrogram should keep track of all the values that are still visible on-screen.
+  - it should, it would be a rather tiny usage of memory for today's computers
+2. Fix the spectral envelope display by sampling frequency space better (i.e., so that the displayed coordinates are optimized)
+3. Add text in various places:
+  - a framerate display
+  - labels on the axes
+4. Normalize FFT results better, and make sure display is in terms of dB with respect to some reasonable level.
+5. Normalize the oscilloscope display better -- make the ticks in terms of ms.
+6. Add more transitions between displays.
+7. Add some mouse interactions, or at least awareness: display position under cursor (for instance frequency&intensity, etc.)
+8. Have some styles to choose from for the spectral envelope display (filled-in/hollow trace, for example)
+9. Add some more advanced processing modules (find the most intense frequency within a range around the mouse position, find the frequency with better precision than the FFT resolution, find the most intense frequency in the whole spectrum, find frequencies taking into account harmonics, ...)
+10. Is there a way to make the window resizable with SDL? If not, does it make sense to switch to a different interface with OpenGL?

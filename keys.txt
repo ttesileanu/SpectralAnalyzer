@@ -1,0 +1,49 @@
+GENERAL
+=======
+Exit program:                 Escape
+Next display type:            d
+Previous display type:        SHIFT + d ('D')
+Next input source:            i
+Previous input source:        SHIFT + i ('I')
+
+SPECTROGRAM
+===========
+Reset axes:                   r
+Log scaling for frequencies:  l
+Log scaling for amplitudes:   SHIFT + l ('L')
+Zoom in frequency domain:     =
+Zoom out frequency domain:    -
+Shift frequency domain up:    UP
+Shift freq. domain down:      DOWN
+Increase gain:                SHIFT + = ('+')
+Decrease gain:                SHIFT + - ('_')
+Move amplitude range up:      RIGHT
+Move amplitude range down:    LEFT
+
+SPECTRAL ENVELOPE
+=================
+Reset axes:                   r
+Flip axes visibility:         a
+Flip grid visibility:         g
+Log scaling for frequencies:  SHIFT + l ('L')
+Log scaling for amplitudes:   l
+Zoom in frequency domain:     SHIFT + = ('+')
+Zoom out frequency domain:    SHIFT + - ('_')
+Shift frequency domain up:    RIGHT
+Shift freq. domain down:      LEFT
+Increase gain:                =
+Decrease gain:                -
+Move amplitude range up:      UP
+Move amplitude range down:    DOWN
+
+OSCILLOSCOPE
+============
+Reset axes:                   r
+Flip axes visibility:         a
+Flip grid visibility:         g
+Next display style:           f
+Previous display style:       SHIFT + f ('F')
+(lines only, lines and dots, dots only)
+Flip starting at zero cross:  s
+Zoom in amplitude:            =
+Zoom out amplitude:           -
